@@ -1,0 +1,83 @@
+body {
+	padding-bottom: 0px;
+	cursor: auto;
+	font-family: 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
+	font-size: 13px;
+	color: black;
+}
+
+.external {
+    background: url(./Resources/external.png);
+}
+
+span.qrcodeicon span {
+    background: url('./Resources/qrcode.png');
+}
+
+.form-horizontal .control-label {
+	width: 120px;
+}
+
+.form-horizontal .controls {
+	margin-left: 140px;
+}
+
+#restore-wallet input {
+	max-width: 300px;
+}
+
+.quickstart {
+	padding-top: 0px;
+	background-color: #AFAFAF;
+	background-image:none;
+	border-top: none;
+	border-bottom:1px solid #656565;
+	position: fixed;
+	color: #3c3c3c;
+	font-weight: bold;
+	text-shadow: 0 1px 1px #e7e7e7;
+	top: 0px;
+	width: 100%;
+	z-index: 1;
+}
+
+.quickstart .container {
+	padding-top: 0px;
+}
+
+.nav-pills > .active > a,
+.nav-pills > .active > a:hover,
+.nav-pills > .active > a:focus {
+  text-shadow: none;
+  color:#F8F8F8;
+}
+
+.nav li a {
+	color: black;
+}
+
+.container {
+	padding-top: 55px;
+}
+
+#restore-wallet > div {
+	margin-top: 0px;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+body > div:nth-of-type(3) {
+	height:65px;
+}
+

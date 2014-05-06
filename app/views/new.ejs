@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My LTC Wallet</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"><link rel="stylesheet" href="/Resources/bootstrap.min.css"><link rel="stylesheet" href="/Resources/bootstrap-responsive.min.css"><link rel="stylesheet" href="/Resources/overrides.min.css?c056e280b89069fe"><script src="/Resources/wallet/jquery.min.js" type="text/javascript"></script><script type="text/javascript" src="/Resources/wallet/bootstrap.min.js"></script><script src="/Resources/wallet/shared.js?c056e280b89069fe" type="text/javascript"></script><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+
+    <style type="text/css">
+        .navbar {
+            margin-bottom:0px;
+        }
+    </style>
+
+    <script type="text/javascript" src="/Resources/wallet/hsimp.js?c056e280b89069fe"></script>
+    <script type="text/javascript" src="/Resources/wallet/dictionary.js?c056e280b89069fe"></script>
+    <script type="text/javascript" src="/Resources/wallet/bitcoinjs.js?c056e280b89069fe"></script>
+    <script type="text/javascript" src="/Resources/wallet/shared.js?c056e280b89069fe"></script>
+    <script type="text/javascript" src="/Resources/wallet/wallet.js?c056e280b89069fe"></script>
+    <script type="text/javascript" src="/Resources/wallet/mnemonic.js?c056e280b89069fe"></script>
+    <script src="/Resources/wallet/wallet-signup.js?c056e280b89069fe" type="text/javascript"></script>
+
+</head>
+<body data-extra-seed="c2d35dfa59b47b0ba81dff6ae4f593ebf7f068a4fad76c62771aad879f887eb1">
+
+    <div class="navbar" style="height:40px;overflow:visible">
+        <div class="navbar-inner" style="height:43px;">
+
+        </div>
+    </div>
+
+    
+
+
+
+<div class="quickstart">
+    <div class="container" id="new-wallet">
+        <div style="margin:0 auto; width:485px">
+            <h3 class="padded">Create A New Wallet. <br /><small>Please choose an alias and password for the new wallet.</small></h3>
+
+            <div class="form-horizontal">
+                <div class="control-group">
+                    <label class="control-label">Email:</label>
+                    <div class="controls">
+                        <input id="email" plceholder="Email Address" name="email" size="30" type="text" />
+
+                        <p class="help-block"><small>(Optional)</small> - We will email you a link to your new wallet.</p>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label">Password:</label>
+                    <div class="controls">
+                        <input id="password" name="password" size="30" type="password" />
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label">Confirm Password:</label>
+                    <div class="controls">
+                        <input id="password2" name="password2" size="30" type="password" />
+                    </div>
+                </div>
+
+                <br />
+
+                <div class="control-group">
+                    <div class="controls">
+                        <img id="captcha"/> <br />
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label">Captcha:</label>
+                    <div class="controls">
+                        <input type="text" id="captcha-value" value="" size="10" style="float:none;width:200px;min-width:200px" />
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button class="btn btn-primary" id="new-wallet-continue">Continue</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container" style="margin-top:10px;">
+    <div id="notices"></div>
+</div>
+
+<div class="container" style="margin-top:10px;" id="password-strength">
+    <div class="alert alert-block alert-info" data-alert="alert" >
+        <a class="close" href="#">&times;</a>
+        <p>
+            <strong>Don't Forget Your Password!</strong><br />
+            WARNING: Forgotten passwords are UNRECOVERABLE and will results in <b>LOSS of ALL of your litecoins!</b>
+        </p>
+    </div>
+
+
+    <div class="well">
+        <h3>Password Strength</h3>
+
+        <p>We require a password of at least 10 characters in length to ensure that even if our database is compromised your wallet will remain secure. A password 10 characters in length will take over 1000 years to decrypt.</p>
+
+        <ul id="password-warnings"></ul>
+        <div class="alert alert-block alert-info" style="display:none" id="password-result"></div>
+    </div>
+
+    <div class="well">
+        <h3>Already registered?</h3>
+
+        If you already have a My Wallet account <a href="https://blockchain.info/wallet/login">Proceed To Login</a>
+    </div>
+
+    <div class="alert alert-block alert-important">
+        Please read our <a href="https://blockchain.info/disclaimer">Disclaimer</a>.
+    </div>
+</div>
+
+<div id="mnemonic-modal" class="modal hide">
+    <div class="modal-header">
+        <div style="float:right;display:inline-block;padding-top:5px"><img src="/Resources/password_24.png"></div> <h3>Wallet Recovery Mnemonic</h3>
+    </div>
+
+    <div class="modal-body">
+        <p>Your wallet has been created successfully. If you forget the details the phrase below can be used to recover everything.</p>
+
+        <p><b>Please Write Down the Following:</b></p>
+
+        <p class="well" id="mnemonic"></p>
+
+        <p align="center" style="color:red;font-weight:bold;">Do not save the mnemonic on your PC or in your email drafts! Write it down or print it!</p>
+
+        <p>Without the mnemonic we cannot help recover forgotten passwords and will result in <b>LOSS of ALL of your bitcoins!</b>.</p>
+    </div>
+
+    <div class="modal-footer">
+        <div class="pull-right">
+            <button class="btn btn-success">Print</button>
+
+            <button class="btn btn-primary">Continue</button>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
